@@ -1,21 +1,21 @@
 ﻿#include "function.h"
 #include <iostream>
 
-function::function(float a, float b, float c) { //конструктор
+function::function(const float a, const float b, const float c) { //конструктор
 	this->a = a;
 	this->b = b;
 	this->c = c;
 }
 
-void function::set_a(float a) {
+void function::set_a(const float a) {
 	this->a = a;
 }
 
-void function::set_b(float b) {
+void function::set_b(const float b) {
 	this->b = b;
 }
 
-void function::set_c(float c) {
+void function::set_c(const float c) {
 	this->c = c;
 }
 
@@ -44,13 +44,13 @@ std::ostream& operator<<(std::ostream& out, const function& function) {
 	return out;
 }
 
-parabola::parabola(float a, float b, float c)
+parabola::parabola(const float a, const float b, const float c)
 	:function(a, b, c) {}
 
 
-linear_function::linear_function(float a, float b)
+linear_function::linear_function(const float a, const float b)
 	: function(0, a, b) {}
 
-constant::constant(float a)
+constant::constant(const float a)
 	: function(0, 0, a) {}
 
