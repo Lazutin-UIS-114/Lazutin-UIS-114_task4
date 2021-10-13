@@ -36,9 +36,10 @@ function function::derivative() {
 }
 
 std::ostream& operator<<(std::ostream& out, const function& function) {
-	if (function.get_a() != 0)
+	double EPS = 0.00000001;
+	if (abs(function.get_a()) > EPS)
 		out << function.get_a() << "x^2 ";
-	if (function.get_b() != 0)
+	if (abs(function.get_b()) > EPS)
 		out << "+ " << function.get_b() << "x ";
 	out << "+ " << function.get_c() << std::endl;
 	return out;
