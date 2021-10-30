@@ -48,6 +48,11 @@ public:
 	function(const float a = 1, const float b = 1, const float c = 1);
 	
 	/**
+	* \brief деструктор функции-многочлена
+        */
+	~function() = default;
+	
+	/**
 	* \brief получение производной функции
         */
 	function derivative();
@@ -63,7 +68,15 @@ ostream& operator<<(ostream& out, const function& function);
 */
 class parabola : public function { //класс парабола
 public:
+	/**
+	* \brief конструктор квадратичной функции
+        */
 	parabola(const float a = 1, const float b = 0, const float c = 0);
+	
+	/**
+	* \brief деструктор квадратичной функции
+        */
+	~parabola() = default;
 };
 
 /**
@@ -75,6 +88,11 @@ public:
 	* \brief конструктор линейной функции
         */
 	linear_function(const float a = 1, const float b = 0); 
+	
+	/**
+	* \brief деструктор линейной функции
+        */
+	linear_function() = default; 
 };
 
 /**
@@ -86,4 +104,9 @@ public:
 	* \brief конструктор константы
         */
 	constant(const float a = 1);
+	
+	/**
+	* \brief деструктор константы
+        */
+	constant() = default;
 };
