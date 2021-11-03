@@ -50,7 +50,7 @@ public:
 	/**
 	* \brief деструктор функции-многочлена
         */
-	~function() = default;
+	virtual ~function() = default;
 	
 	/**
 	* \brief получение производной функции
@@ -92,7 +92,7 @@ public:
 	/**
 	* \brief деструктор линейной функции
         */
-	linear_function() = default; 
+	~linear_function() = default; 
 };
 
 /**
@@ -108,5 +108,5 @@ public:
 	/**
 	* \brief деструктор константы
         */
-	constant() = default;
+	~constant() = default;
 };
